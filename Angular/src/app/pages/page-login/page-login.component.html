@@ -1,0 +1,22 @@
+<body>
+    
+    <div class="container">
+        
+        <form>
+        <h2>Connexion</h2>
+        
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" [(ngModel)]="loginObj.email"  placeholder="Entrez votre adresse e-mail">
+
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" name="password"[(ngModel)]="loginObj.password" placeholder="Entrez votre mot de passe">
+
+        <div class="button-container">
+            <button type="button" class="register-button"><a [routerLink]="['/inscrire']">S'inscrire </a></button>
+            <button type="button" (click)="onLogin()" class="login-button"><i class="fa-solid fa-circle-check fa-beat"></i>&nbsp;
+                Se connecter
+            </button>
+        </div>
+        </form>
+    </div>
+</body> 

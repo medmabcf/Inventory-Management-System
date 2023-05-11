@@ -1,0 +1,37 @@
+<body >
+    
+
+<div class="container">
+        
+    <form>
+    <h2>Inscription</h2>
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="nom"[(ngModel)]="signupObj.nom" placeholder="Entrez votre nom">
+    
+    <label for="prenom">Prénom</label>
+    <input type="text" id="prenom" name="prenom"[(ngModel)]="signupObj.prenom" placeholder="Entrez votre prénom">
+    
+    <label for="adresse">Adresse</label>
+    <input type="text" id="adresse" name="adresse"[(ngModel)]="signupObj.adresse" placeholder="Entrez votre adresse complete">
+
+    <label for="code-postal">Code postal</label>
+    <input type="text" id="code-postal" name="code-postal"[(ngModel)]="signupObj.code_postal" placeholder="Entrez votre code postal">
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email"[(ngModel)]="signupObj.email" placeholder="Entrez votre adresse e-mail">
+
+    <label for="password">Mot de passe</label>
+    <input type="password" id="password" name="password"[(ngModel)]="signupObj.password" placeholder="Entrez votre mot de passe">
+    
+    <label for="password">Confirmer le mot de passe</label>
+    <input type="password" id="password" name="password"[(ngModel)]="signupObj.confpassword" placeholder="Confirmez votre mot de passe">
+    
+    <div class="button-container">
+        <button type="button" class="register-button"><a [routerLink]="['/login']">Se connecter </a></button>
+        <button type="button" (click)="onSignUp()" class="login-button"><i class="fa-solid fa-circle-check fa-beat"></i>&nbsp;
+            S'inscrire
+        </button>
+    </div>
+    </form>
+</div>
+</body>
