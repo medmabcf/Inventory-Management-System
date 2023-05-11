@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #eff2f5 !important;
+    /*background-image: url("C:/Users/oussa/projet-pfa/src/assets/interface2.png");*/
+}
+
+.background-grey{
+    background-color: #eff2f5 !important;
+
+}
+.border-none{
+    border: none !important;
+}
+.border-right{
+    border-right: 2px solid #9ca1a6 !important;
+}
+.custom-border{
+    border: solid #9ca1a6;
+    border-radius: 5px;
+}
+.blue-color{
+    color: #037bfe;
+}

@@ -1,0 +1,76 @@
+<div class="row mb-1 mr-0  custom-border">
+    <div class="col-md-1 border-right p-1  mt-1 text-center">
+    <img src="assets/product.png" width="90px" height="100px">
+    </div>
+
+    <div class="col-md-5 border-right mb-1 mt-1">
+        <div class="col">
+            <div class="row">
+                <div class="col-md-1"> <i class="fas fa-info-circle blue-color"></i> </div>
+                <div class="col-md-11">Code article</div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"> <i class="fas fa-info-circle blue-color"></i> </div>
+                <div class="col-md-11">désignation</div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"> <i class="fas fa-dollar-sign blue-color"></i> </div>
+                <div class="col-md-11">Prix HT</div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"> <i class="fas fa-dollar-sign blue-color"></i> </div>
+                <div class="col-md-11">Prix TTC</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-3 border-right">
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-12 text-center"><h5>Stock actuel</h5></div>
+                    <div class="col-md-12 text-center"><h5>139</h5></div>
+
+                </div>
+            </div>
+    </div>
+    <div class="col-md-3 mb-1 mt-1">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+              <i class="fab fa-stack-overflow blue-color"></i>&nbsp; Correction du stock</button>
+          </div>
+            
+        </div>
+    </div>
+
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
