@@ -16,7 +16,7 @@ import { PageProfilComponent } from './pages/profil/page-profil/page-profil.comp
 import { ChangerMotDePasseComponent } from './pages/profil/changer-mot-de-passe/changer-mot-de-passe.component';
 import { ApplicationGuardService } from './services/guard/application-guard.service';
 import {PageCategorieComponent} from './pages/categories/page-categorie/page-categorie.component';
-import {NouvelCategorieComponent} from './pages/categories/nouvel-categorie/nouvel-categorie.component';
+import {NewCategoryComponent} from './pages/categories/new-category/new-category.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -127,10 +127,11 @@ const routes: Routes = [
         canActivate: [ApplicationGuardService]
       },
       {
-        path: 'nouvellecategorie',
-        component: NouvelCategorieComponent,
+        path: 'newcategory',
+        component: NewCategoryComponent,
         canActivate: [ApplicationGuardService]
-      }
+      },
+      { path: 'newcategory/:id', component: NewCategoryComponent,canActivate: [ApplicationGuardService] }
 
 
     ]

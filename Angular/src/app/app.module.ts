@@ -32,7 +32,7 @@ import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 
 
 import {HttpClientModule} from '@angular/common/http';
-import { NouvelCategorieComponent } from './pages/categories/nouvel-categorie/nouvel-categorie.component';
+import { NewCategoryComponent } from './pages/categories/new-category/new-category.component';
 import { PageCategorieComponent } from './pages/categories/page-categorie/page-categorie.component';
 import {CategoryService} from './services/category/category.service'
 
@@ -64,7 +64,7 @@ import {CategoryService} from './services/category/category.service'
     NouvelleCmdCltFrsComponent,
     PageProfilComponent,
     ChangerMotDePasseComponent,
-    NouvelCategorieComponent,
+    NewCategoryComponent,
     PageCategorieComponent
   ],
   imports: [

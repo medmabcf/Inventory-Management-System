@@ -4,11 +4,11 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {CategoryDto} from '../../../../gs-api/src/models/category-dto';
 import {CategoryService} from '../../../services/category/category.service';
 @Component({
-  selector: 'app-nouvel-categorie',
-  templateUrl: './nouvel-categorie.component.html',
-  styleUrls: ['./nouvel-categorie.component.css']
+  selector: 'app-new-category',
+  templateUrl: './new-category.component.html',
+  styleUrls: ['./new-category.component.css']
 })
-export class NouvelCategorieComponent implements OnInit {
+export class NewCategoryComponent implements OnInit {
   categorydto: CategoryDto = {};
   errorMsg: Array<string> = [];
   category_id!: number;
@@ -42,6 +42,13 @@ export class NouvelCategorieComponent implements OnInit {
   }
  
   ngOnInit(): void {
+  
+    this.category_id  = this.activatedRoute.snapshot.params['id'];
+  
+   
+    
+    
+
     throw new Error('Method not implemented.');
   }
                     
