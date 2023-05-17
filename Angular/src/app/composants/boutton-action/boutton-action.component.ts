@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-boutton-action',
@@ -7,21 +8,24 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class BouttonActionComponent implements OnInit {
   @Input()
-  isNouveauVisible=true;
+  isNewVisible=true;
   @Input()
   isExporterVisible=true;
   
   @Input()
   isImporterVisible=true;
 
-  @Output()
-  clickEvent=new EventEmitter();
+  @Output()  clickEvent=new EventEmitter();
   
-  constructor(){}
+  constructor(
+    private router: Router,
+  ){}
   ngOnInit(): void {
   }
-  bouttonNouveauClick(): void{
+  bouttonNewClick(): void{
     this.clickEvent.emit();
+    this.router.navigate(['newcategory']);
+
 
   }
 

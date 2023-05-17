@@ -5,7 +5,8 @@ import { PageInscriptionComponent } from './pages/page-inscription/page-inscript
 import { PageLoginComponent } from './pages/page-login/page-login.component';
 import { PageStatistiquesComponent } from './pages/page-statistiques/page-statistiques.component';
 import { PageArticleComponent } from './pages/articles/page-article/page-article.component';
-import { NouvelArticleComponent } from './pages/articles/nouvel-article/nouvel-article.component';
+import { NewProductComponent } from './pages/articles/new-product/new-product.component';
+
 import { PageMvtstkComponent } from './pages/mvtstk/page-mvtstk/page-mvtstk.component';
 import { PageClientComponent } from './pages/client/page-client/page-client.component';
 import { PageFournisseurComponent } from './pages/fournisseurs/page-fournisseur/page-fournisseur.component';
@@ -41,8 +42,8 @@ const routes: Routes = [
         canActivate: [ApplicationGuardService]
       },
       {
-        path: 'nouvelarticle',
-        component: NouvelArticleComponent,
+        path: 'newproduct',
+        component: NewProductComponent,
         canActivate: [ApplicationGuardService]
       },
       {
@@ -102,7 +103,6 @@ const routes: Routes = [
           origin: 'fournisseur'
         }
       },
-
       {
         path: 'nouvellecommandefrs',
         component: NouvelleCmdCltFrsComponent,

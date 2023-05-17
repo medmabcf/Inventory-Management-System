@@ -13,7 +13,9 @@ class Product(models.Model):
     name = models.CharField(max_length=255,unique=True)
     description = models.TextField(null=True)
     price = models.FloatField()
+    quantity=models.BigIntegerField(default=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+  
     #sku = models.CharField(max_length=50, unique=True)
     #image = models.ImageField(upload_to='products/', null=True, blank=True)
       
