@@ -4,7 +4,7 @@
         <h1>Liste des categories</h1>
       </div>
       <div class="col-md-4 text-end">
-        <app-boutton-action></app-boutton-action>
+        <app-boutton-action (buttonnewclicked)="gotonewCategory()"  ></app-boutton-action>
       </div>
     </div>
     <div class="my-3" *ngIf="errorMsgs">

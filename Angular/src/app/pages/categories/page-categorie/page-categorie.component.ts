@@ -57,6 +57,9 @@ export class PageCategorieComponent implements OnInit {
       );
    }
   }
-
+  gotonewCategory():void{
+    this.router.navigate(['newcategory']);
+  }
+ 
    
 }

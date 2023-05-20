@@ -31,12 +31,8 @@
                     </div>
                     <div class="col">
                         <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Séléctionner une catégorie</option>
-                            <option>Séléctionner une catégorie</option>
-                            <option>Séléctionner une catégorie</option>
-                            <option>Séléctionner une catégorie</option>
-                            <option>Séléctionner une catégorie</option>
-
+                            <option *ngFor="let category of ListCategories">{{ category.name }}</option>
+                          
                         </select>
                     </div>  
                 </div>

@@ -12,8 +12,9 @@ export class PageArticleComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-  nouvelArticle() : void{
-    this.router.navigate(['nouvelarticle']);
+
+  newProduct(): void {
+    this.router.navigate(['newproduct']);
   }
 
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { OnInit ,Input} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {CategoryDto} from '../../../../gs-api/src/models/category-dto';
+//import {CategoryDto} from '../../../../gs-api/src/models/category-dto';
 import {CategoryService} from '../../../services/category/category.service';
 @Component({
   selector: 'app-new-category',
@@ -9,7 +9,7 @@ import {CategoryService} from '../../../services/category/category.service';
   styleUrls: ['./new-category.component.css']
 })
 export class NewCategoryComponent implements OnInit {
-  categorydto: CategoryDto = {};
+  //categorydto: CategoryDto = {};
   errorMsg: Array<string> = [];
   category_id!: number;
   description: string="";
@@ -49,7 +49,7 @@ export class NewCategoryComponent implements OnInit {
     
     
 
-    throw new Error('Method not implemented.');
+
   }
                     
 }

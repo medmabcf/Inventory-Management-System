@@ -15,7 +15,7 @@ export class BouttonActionComponent implements OnInit {
   @Input()
   isImporterVisible=true;
 
-  @Output()  clickEvent=new EventEmitter();
+  @Output()  buttonnewclicked=new EventEmitter<void>();
   
   constructor(
     private router: Router,
@@ -23,9 +23,7 @@ export class BouttonActionComponent implements OnInit {
   ngOnInit(): void {
   }
   bouttonNewClick(): void{
-    this.clickEvent.emit();
-    this.router.navigate(['newcategory']);
-
+    this.buttonnewclicked.emit();
 
   }
 
