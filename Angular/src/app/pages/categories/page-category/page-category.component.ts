@@ -6,11 +6,11 @@ import {CategoryService} from '../../../services/category/category.service';
 //import {MatDialog} from '@angular/material/dialog'
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
-  selector: 'app-page-categorie',
-  templateUrl: './page-categorie.component.html',
-  styleUrls: ['./page-categorie.component.css']
+  selector: 'app-page-category',
+  templateUrl: './page-category.component.html',
+  styleUrls: ['./page-category.component.css']
 })
-export class PageCategorieComponent implements OnInit {
+export class PageCategoryComponent implements OnInit {
   @ViewChild('myModal') myModal!: ElementRef;
   CategoriesList: any  = [];
   cat :any;

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Category } from 'src/app/modules/CategoryInf';
+import { Product } from 'src/app/modules/ProductInf'; 
 
 @Component({
   selector: 'app-detail-article',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./detail-article.component.css']
 })
 export class DetailArticleComponent {
-
+  @Input()   productMD:any;
+  @Input() test:boolean=true;
+  
+  categoryMD:Category={};
 }

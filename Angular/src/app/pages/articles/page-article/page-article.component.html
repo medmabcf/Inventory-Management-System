@@ -1,25 +1,24 @@
-
 <div class="col">
     <div class="row m-3">
         <div class="col-md-8 p-0">
             <h1>Listes des articles</h1>
         </div>
         <div class="col-md-4 text-right">
-            <app-boutton-action
-            (buttonnewclicked)="newProduct()"  ></app-boutton-action>
+            <app-boutton-action (buttonnewclicked)="newProduct()"></app-boutton-action>
         </div>
     </div>
     <div class=" col m-3">
-        <app-detail-article></app-detail-article>
-        <app-detail-article></app-detail-article>
-        <app-detail-article></app-detail-article>
-        <app-detail-article></app-detail-article>
-        <app-detail-article></app-detail-article>
+        <ng-container *ngIf="ProductsList.length>0; else elseBlock">
+            <app-detail-article *ngFor="let pt of ProductsList" [productMD]="pt" ></app-detail-article>
+          </ng-container>
+          <ng-template #elseBlock>
+            <app-detail-article  [test]="false" ></app-detail-article>
+          </ng-template>
 
     </div>
     <div class="row mb-3">
         <div class="col-md-12 text-center">
-        <app-pagination></app-pagination>
+            <app-pagination></app-pagination>
         </div>
     </div>
 </div>

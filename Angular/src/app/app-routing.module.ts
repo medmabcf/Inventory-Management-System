@@ -16,7 +16,7 @@ import { NouvelleCmdCltFrsComponent } from './composants/nouvelle-cmd-clt-frs/no
 import { PageProfilComponent } from './pages/profil/page-profil/page-profil.component';
 import { ChangerMotDePasseComponent } from './pages/profil/changer-mot-de-passe/changer-mot-de-passe.component';
 import { ApplicationGuardService } from './services/guard/application-guard.service';
-import {PageCategorieComponent} from './pages/categories/page-categorie/page-categorie.component';
+import {PageCategoryComponent} from './pages/categories/page-category/page-category.component';
 import {NewCategoryComponent} from './pages/categories/new-category/new-category.component';
 const routes: Routes = [
   {
@@ -123,7 +123,7 @@ const routes: Routes = [
       },
       {
         path: 'categories',
-        component: PageCategorieComponent,
+        component: PageCategoryComponent,
         canActivate: [ApplicationGuardService]
       },
       {

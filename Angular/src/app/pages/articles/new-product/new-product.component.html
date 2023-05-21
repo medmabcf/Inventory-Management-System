@@ -5,33 +5,35 @@
     <div class="col md-12">
         <div class="col md-12 mb-3">
             <h2> <i class="fas fa-info-circle blue-color"></i>&nbsp; 
-            Information de l'article</h2>
+           Create New Product</h2>
         </div>
         <div class="col md-12">
             <form >
                 <div class="row">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Product Code">
+                        <input type="number" class="form-control" placeholder="Product Code"  [(ngModel)]="productMD.product_id" [ngModelOptions]="{standalone: true}"  >
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Price">
+                        <input type="number" class="form-control" placeholder="Price" [(ngModel)]="productMD.price" [ngModelOptions]="{standalone: true}"  >
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Name">
+                        <input type="text" class="form-control" placeholder="Name" [(ngModel)]="productMD.name" [ngModelOptions]="{standalone: true}"  >
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Quantity">
+                        <input type="number" class="form-control" placeholder="Quantity" [(ngModel)]="productMD.quantity" [ngModelOptions]="{standalone: true}"  >
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Description">
+                        <input type="text" class="form-control" placeholder="Description" [(ngModel)]="productMD.description" [ngModelOptions]="{standalone: true}"  >
                     </div>
                     <div class="col">
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option *ngFor="let category of ListCategories">{{ category.name }}</option>
+                        <select class="form-control" name="category"  [(ngModel)]="productMD.category"   [ngModelOptions]="{standalone: true}"  >
+                            <option disabled selected [value]="null"  >Choose a category</option>
+                            <option *ngFor="let category of ListCategories" [value]="category.category_id">{{ category.name }}</option>
+                            
                           
                         </select>
                     </div>  
@@ -45,9 +47,9 @@
                     <i class="fas fa-ban"></i>&nbsp;
                     Annuler
                 </button>
-                <button class="btn btn-primary">
+                <button class="btn btn-primary" (click)="addproduct()">
                     <i class="fas fa-save"></i>&nbsp;
-                    Enregistrer
+                    Save
                 </button>
             </div>  
         

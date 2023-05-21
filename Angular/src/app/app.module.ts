@@ -33,8 +33,9 @@ import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 
 import {HttpClientModule} from '@angular/common/http';
 import { NewCategoryComponent } from './pages/categories/new-category/new-category.component';
-import { PageCategorieComponent } from './pages/categories/page-categorie/page-categorie.component';
+import { PageCategoryComponent } from './pages/categories/page-category/page-category.component';
 import {CategoryService} from './services/category/category.service'
+import { ProductService } from './services/product/product.service';
 
 
 @NgModule({
@@ -65,7 +66,7 @@ import {CategoryService} from './services/category/category.service'
     PageProfilComponent,
     ChangerMotDePasseComponent,
     NewCategoryComponent,
-    PageCategorieComponent
+    PageCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +77,7 @@ import {CategoryService} from './services/category/category.service'
     ReactiveFormsModule,
     NgbModule
   ],
-  providers: [CategoryService],
+  providers: [CategoryService,ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
