@@ -17,7 +17,7 @@
                 <form>
                     <div class="row mb-3">
                         <div class="col">
-                            <input type="number" class="form-control" placeholder="Code category" name="codeCat"
+                            <input type="number" class="form-control" placeholder="category code (optional)" name="codeCat"
                                 [(ngModel)]="category_id">
                         </div>
                     </div>
@@ -32,9 +32,9 @@
         </div>
         <div class="col-md-12 text-right">
             <button class="btn btn-danger mr-3">
-                <i class="fas fa-ban"></i>&nbsp; Annuler
+                <i class="fas fa-ban"></i>&nbsp; Cancel
             </button>
-            <button class="btn btn-primary" (click)="addCategory()">
+            <button class="btn btn-primary" (click)="save()">
                 <i class="fas fa-save"></i>&nbsp; Save
             </button>
         </div>

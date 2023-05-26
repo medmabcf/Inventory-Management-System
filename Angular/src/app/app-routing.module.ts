@@ -4,7 +4,7 @@ import { PageDashboardComponent } from './pages/page-dashboard/page-dashboard.co
 import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
 import { PageLoginComponent } from './pages/page-login/page-login.component';
 import { PageStatistiquesComponent } from './pages/page-statistiques/page-statistiques.component';
-import { PageArticleComponent } from './pages/articles/page-article/page-article.component';
+import { PageProductComponent } from './pages/articles/page-product/page-product.component';
 import { NewProductComponent } from './pages/articles/new-product/new-product.component';
 
 import { PageMvtstkComponent } from './pages/mvtstk/page-mvtstk/page-mvtstk.component';
@@ -18,6 +18,7 @@ import { ChangerMotDePasseComponent } from './pages/profil/changer-mot-de-passe/
 import { ApplicationGuardService } from './services/guard/application-guard.service';
 import {PageCategoryComponent} from './pages/categories/page-category/page-category.component';
 import {NewCategoryComponent} from './pages/categories/new-category/new-category.component';
+import { DetailArticleComponent } from './composants/detail-article/detail-article.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -37,8 +38,8 @@ const routes: Routes = [
         canActivate: [ApplicationGuardService]
       },
       {
-        path: 'articles',
-        component: PageArticleComponent,
+        path: 'products',
+        component: PageProductComponent,
         canActivate: [ApplicationGuardService]
       },
       {

@@ -4,6 +4,7 @@ import {CategoryService} from '../../../services/category/category.service';
 import { ProductService } from 'src/app/services/product/product.service';
 import { Category } from 'src/app/modules/CategoryInf';
 import { Product } from 'src/app/modules/ProductInf'; 
+
 @Component({
   selector: 'app-new-product',
   templateUrl: './new-product.component.html',
@@ -15,7 +16,8 @@ export class NewProductComponent implements OnInit{
 ListCategories:any=[];
 productMD:Product={};
 selectedcategory:Category={};
-sc :any;
+id?:number;
+  activatedRoute: any;
 constructor(
   private router:Router,
   private categoryservice: CategoryService,
@@ -25,13 +27,18 @@ constructor(
 }
 ngOnInit(): void {
   this.getcategorylist();
+  this.id = this.activatedRoute.snapshot.params['id'];
+
+
 }
+// get category list
 getcategorylist(){
   this.categoryservice.getCategoriesList().subscribe(data=>{
       this.ListCategories=data;
       console.log(this.ListCategories);
   })
 }
+// add product 
 addproduct(){
   
 
@@ -50,7 +57,12 @@ addproduct(){
     }
   );
 }
+
+//cancel
 cancel() : void{
 this.router.navigate(['articles']);
+}
+gotonewCategory():void{
+  this.router.navigate(['newcategory']);
 }
 }

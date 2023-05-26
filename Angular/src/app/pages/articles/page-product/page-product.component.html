@@ -7,9 +7,9 @@
             <app-boutton-action (buttonnewclicked)="newProduct()"></app-boutton-action>
         </div>
     </div>
-    <div class=" col m-3">
-        <ng-container *ngIf="ProductsList.length>0; else elseBlock">
-            <app-detail-article *ngFor="let pt of ProductsList" [productMD]="pt" ></app-detail-article>
+    <div class=" col m-3"  >
+        <ng-container  *ngIf="ProductsList.length>0; else elseBlock" >
+            <app-detail-article   *ngFor="let pt of ProductsList" [productMD]="pt" ></app-detail-article>
           </ng-container>
           <ng-template #elseBlock>
             <app-detail-article  [test]="false" ></app-detail-article>

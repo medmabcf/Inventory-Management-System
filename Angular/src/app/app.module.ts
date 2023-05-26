@@ -10,7 +10,7 @@ import { PageStatistiquesComponent } from './pages/page-statistiques/page-statis
 import { MenuComponent } from './composants/menu/menu.component';
 import { A11yModule } from '@angular/cdk/a11y';
 import { HeaderComponent } from './header/header.component';
-import { PageArticleComponent } from './pages/articles/page-article/page-article.component';
+import { PageProductComponent } from './pages/articles/page-product/page-product.component';
 import { DetailArticleComponent } from './composants/detail-article/detail-article.component';
 import { PaginationComponent } from './composants/pagination/pagination.component';
 import { BouttonActionComponent } from './composants/boutton-action/boutton-action.component';
@@ -47,7 +47,7 @@ import { ProductService } from './services/product/product.service';
     PageStatistiquesComponent,
     MenuComponent,
     HeaderComponent,
-    PageArticleComponent,
+    PageProductComponent,
     DetailArticleComponent,
     PaginationComponent,
     BouttonActionComponent,

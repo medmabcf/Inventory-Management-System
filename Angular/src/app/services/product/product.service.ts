@@ -32,4 +32,45 @@ export class ProductService {
   getProductsList(): Observable<any[]> {
     return this.http.post<any[]>(this.APIUrl + '/dashboard/products/get_all/', {});
   }
+
+
+
+//Update product 
+
+updateProduct(val:any,id:number) {
+  return this.http.put(this.APIUrl + '/dashboard/products/'+id.toString()+'/', val)
+.pipe(
+ catchError((error) => {
+   // Handle the error here
+   console.error('An error occurred:', error);
+   const errorData = error.error;
+   let message: string ="";
+   for (const property in errorData) {
+     console.log(property + ': ' + errorData[property]);
+     message+=errorData[property]+"\n";
+   }
+ // Return an observable with the extracted error message
+ return throwError(message);
+ })
+);
+}
+//delete product 
+deleteProduct(val:any,id:number) {
+  console.log(val+"vlfevmlf");
+return this.http.delete(this.APIUrl + '/dashboard/products/'+id.toString()+'/',val)
+.pipe(
+catchError((error) => {
+// Handle the error here
+// console.error('An error occurred:', error);
+const errorData = error.error;
+let message: string ="";
+for (const property in errorData) {
+  console.log(property + ': ' + errorData[property]);
+  message+=errorData[property]+"\n";
+}
+// Return an observable with the extracted error message
+return throwError(message);
+})
+);
+}
 }

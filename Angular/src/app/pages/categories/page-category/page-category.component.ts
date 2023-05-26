@@ -47,7 +47,7 @@ export class PageCategoryComponent implements OnInit {
            };
       this.categoryservice.deleteCategory(val,this.delete_id).subscribe((response) => {
           // Handle successful response here
-            alert("deleted successfully");
+          
             this.refreshCategory();
         },
         (error) => {

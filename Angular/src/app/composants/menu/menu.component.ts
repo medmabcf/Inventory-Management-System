@@ -12,7 +12,7 @@ export class MenuComponent {
   menuProperties: Menu[] = [
     {
       id: '1',
-      titre: 'Tableau de bord',
+      titre: 'Dashboard',
       icon: 'fas fa-tachometer-alt',
       url: '#',
       expanded: false,
@@ -37,12 +37,12 @@ export class MenuComponent {
       expanded: false,
       sousMenu: [
         { id:'21',
-          titre: 'Articles',
-          url: 'articles'
+          titre: 'Products',
+          url: 'products'
         },
         {
           id:'22',
-          titre: 'Mouvement de stock',
+          titre: 'Mouvement',
           url: 'mvtstk'
         }
       ]
@@ -87,15 +87,15 @@ export class MenuComponent {
     },
     {
       id: '5',
-      titre: 'Catégories',
+      titre: 'Categories',
       icon: 'fas fa-list',
       url: '#',
       expanded: false,
       sousMenu: [
         {
           id:'51',
-          titre: 'Utilisateurs',
-          url: '#'
+          titre: 'categories',
+          url: 'categories'
         }
       ]
     }

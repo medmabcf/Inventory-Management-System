@@ -4,11 +4,11 @@ import { ProductService } from 'src/app/services/product/product.service';
 import { CategoryService } from 'src/app/services/category/category.service';
 import { Product } from 'src/app/modules/ProductInf';
 @Component({
-  selector: 'app-page-article',
-  templateUrl: './page-article.component.html',
-  styleUrls: ['./page-article.component.css']
+  selector: 'app-page-product',
+  templateUrl: './page-product.component.html',
+  styleUrls: ['./page-product.component.css']
 })
-export class PageArticleComponent implements OnInit {
+export class PageProductComponent implements OnInit {
   ProductsList:any=[];
   constructor(
     private router:Router,
@@ -28,5 +28,6 @@ export class PageArticleComponent implements OnInit {
   newProduct(): void {
     this.router.navigate(['newproduct']);
   }
+  
 
 }
